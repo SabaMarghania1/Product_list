@@ -2,6 +2,7 @@ import React from 'react';
 import { useCart } from '../contexts/CartContext';
 import ReactDOM from 'react-dom';
 import styles from './Modal.module.css';
+import ModalProduct from './ModalProduct';
 
 export default function Modal() {
   const { isModalOpen, closeModal,cart } = useCart();
@@ -14,8 +15,6 @@ export default function Modal() {
     }
   };
 
-  console.log(cart)
-
 
   return ReactDOM.createPortal(
     <div className={styles.overlay} onClick={handleOverlayClick}>
@@ -24,6 +23,14 @@ export default function Modal() {
         <img src="assets/images/icon-order-confirmed.svg" alt="icons" className={styles.confirmImage} />
         <h2 className={styles.title}>Order Confirmed</h2>
         <p className={styles.subtitle}>We hope you enjoy your food!</p>
+
+        <ul className={styles.modalList}>
+          {cart.map(item=>
+          <ModalProduct key={item.name} item={item}/>)}
+
+        </ul>
+
+
       </header>
       </div>
     </div>,

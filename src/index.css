@@ -34,13 +34,22 @@
 body{
     font-family:"Red Hat Texts",sans-serif;
     background-color: var(--rose-50);
+    min-height:100vh;
 
 }
 
+ul{
+    list-style:none;
+}
+
 #root{
-    height:100vh;
+    /* height:100vh; */
     background-color: var(--rose-50);
 
+}
+
+#portal-root{
+    min-height:100vh;
 }
 
 
