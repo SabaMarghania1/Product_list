@@ -15,6 +15,7 @@ export default function Modal() {
     }
   };
 
+  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
 
   return ReactDOM.createPortal(
     <div className={styles.overlay} onClick={handleOverlayClick}>
@@ -23,15 +24,20 @@ export default function Modal() {
         <img src="assets/images/icon-order-confirmed.svg" alt="icons" className={styles.confirmImage} />
         <h2 className={styles.title}>Order Confirmed</h2>
         <p className={styles.subtitle}>We hope you enjoy your food!</p>
+         </header>
 
-        <ul className={styles.modalList}>
+         <main className={styles.main}>
+
+         <ul className={styles.modalList}>
           {cart.map(item=>
           <ModalProduct key={item.name} item={item}/>)}
-
         </ul>
-
-
-      </header>
+          <p className={styles.total}>Order Total <span>${totalPrice}</span></p>
+         </main>
+         <footer>
+          <button className={styles.newOrder}>Start New Order</button>
+         </footer>
+   
       </div>
     </div>,
     document.getElementById('portal-root')
