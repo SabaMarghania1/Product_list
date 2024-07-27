@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root{
+    /* colors */
+    --red:#c73b0f;
+    --rose-900:#260F08;
+    --rose-500:#87635A;
+    --rose-500:#AD8A85;
+    --rose-300:#CAAFA7;
+    --rose-100:#F5EEEC;
+    --rose-50:#FCF8F6;
+    --green:#1EA575;
+    --black:#000000;
+    --white:#ffffff;
+
+    /* Spacing */
+    --spacing-1100:88px;
+    --spacing-500:40px;
+    --spacing-400:32px;
+    --spacing-300:24px;
+    --spacing-200:16px;
+    --spacing-150:12px;
+    --spacing-100:8px;
+    --spacing-50:4px;
+
+}
+
+* { 
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:"Red Hat Texts",sans-serif;
+    background-color: var(--rose-50);
+
+}
+
+#root{
+    height:100vh;
+    background-color: var(--rose-50);
+
+}
+
+
+.app{
+    padding:24px;
+}
+
+a{
+    text-decoration:none;
+    color:inherit
+}
