@@ -86,5 +86,6 @@
   padding:var(--spacing-200);
   border:none;
   border-radius:999px;
-
+  font-size: 18px;
+  cursor:pointer;
 }

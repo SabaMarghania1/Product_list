@@ -53,6 +53,9 @@ const reducer = (state, action) => {
         ...state,
         isModalOpen: false,
       };
+    case "NewOrder":
+      return initialState
+      
     default:
       return state;
   }

@@ -45,6 +45,10 @@ function CartProvider({ children }) {
     dispatch({ type: "CloseModal" });
   };
 
+  const newOrder = ()=>{
+    dispatch({type:"NewOrder"})
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -56,6 +60,7 @@ function CartProvider({ children }) {
         remove,
         openModal,
         closeModal,
+        newOrder
       }}
     >
       {children}

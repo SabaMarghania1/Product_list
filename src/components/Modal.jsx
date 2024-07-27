@@ -5,7 +5,7 @@ import styles from './Modal.module.css';
 import ModalProduct from './ModalProduct';
 
 export default function Modal() {
-  const { isModalOpen, closeModal,cart } = useCart();
+  const { isModalOpen, closeModal,cart,newOrder } = useCart();
 
   if (!isModalOpen) return null;
 
@@ -35,7 +35,7 @@ export default function Modal() {
           <p className={styles.total}>Order Total <span>${totalPrice}</span></p>
          </main>
          <footer>
-          <button className={styles.newOrder}>Start New Order</button>
+          <button className={styles.newOrder} onClick= {newOrder}>Start New Order</button>
          </footer>
    
       </div>
