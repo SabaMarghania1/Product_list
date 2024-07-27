@@ -33,7 +33,7 @@ const reducer = (state, action) => {
         ...state,
         cart: state.cart
           .map((item) =>
-            item.name === action.payload.name && item.quantity > 1
+            item.name === action.payload.name
               ? { ...item, quantity: item.quantity - 1 }
               : item
           )
