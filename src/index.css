@@ -48,9 +48,9 @@ ul{
 
 }
 
-#portal-root{
+/* #portal-root{
     min-height:100vh;
-}
+} */
 
 
 .app{
@@ -60,4 +60,17 @@ ul{
 a{
     text-decoration:none;
     color:inherit
+}
+
+
+@media screen and (min-width:768px){
+    .app{
+        padding:40px;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .app{
+        padding:88px 112px;
+    }
 }

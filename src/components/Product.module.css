@@ -98,3 +98,19 @@
     width:14px !important;
     height:14px !important;
 }
+
+@media screen and (min-width:768px){
+    .product{
+        width:213px;
+    }
+
+    .imageContainer button{
+        width:75%;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .product{
+        width:250px;
+    }
+}
